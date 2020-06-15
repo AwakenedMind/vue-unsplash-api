@@ -4,8 +4,8 @@
 			<span class="material-icons logo">
 				party_mode
 			</span>
-			<div class="search-field">
-				<input type="text" placeholder="Search for an Image" />
+			<form class="search-field" v-on:submit.prevent="onSubmit">
+				<input type="text" placeholder="Search for an Image" v-model="text" />
 				<button>
 					<span>
 						Search
@@ -14,7 +14,7 @@
 						search
 					</span>
 				</button>
-			</div>
+			</form>
 			<nav>
 				<span>Home</span>
 				<span>Trending</span>
@@ -31,6 +31,14 @@ console.log(accessToken);
 export default {
 	name: 'App',
 	components: {},
+	data: () => {
+		return {
+			text: '',
+		};
+	},
+	methods: {
+		onSubmit: function() {},
+	},
 };
 </script>
 
