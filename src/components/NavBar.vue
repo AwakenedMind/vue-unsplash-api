@@ -1,14 +1,36 @@
 <template>
-	<NavBar />
+	<div id="app">
+		<div class="navbar">
+			<span class="material-icons logo">
+				party_mode
+			</span>
+			<div class="search-field">
+				<input type="text" placeholder="Search for an Image" />
+				<button>
+					<span>
+						Search
+					</span>
+					<span class="material-icons">
+						search
+					</span>
+				</button>
+			</div>
+			<nav>
+				<span>Home</span>
+				<span>Trending</span>
+			</nav>
+		</div>
+	</div>
 </template>
 
 <script>
-import NavBar from './components/NavBar';
-// const accessToken = process.env.VUE_APP_ACCESS_KEY;
+const accessToken = process.env.VUE_APP_ACCESS_KEY;
+
+console.log(accessToken);
 
 export default {
 	name: 'App',
-	components: { NavBar },
+	components: {},
 };
 </script>
 
